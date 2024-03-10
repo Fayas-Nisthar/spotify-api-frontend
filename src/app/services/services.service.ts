@@ -34,6 +34,6 @@ export class ServicesService {
     return this.http.get(`${this.baseUrl}artists/${id}/top-tracks`,{headers})
   }
   getToken(){
-    return "Bearer BQDBpgc1a74Rt53_xY-7jdtVj8N_96l_XliGOexSJ17AYFZQzj375Bp-Iwj7Kg_l5jpT-oWtdoy4hbPyDQ1PNkjW0UVqBHJNS4zhuyyldAfiLEQIdRQ"
+    return ""
   }
 }
