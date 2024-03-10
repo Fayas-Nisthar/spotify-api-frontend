@@ -1,0 +1,37 @@
+<div class="home-container bg-black row">
+    <div class="home-container-side-bar position-fixed col-3 p-2">
+        <div class="home-container-side-bar-section ms-2 p-3 rounded">
+            <div class="ms-3">
+                <img width="80" src="assets/image/spotify.png" alt="">
+            </div>
+            <div class="d-flex mt-4 gap-3" (click)="onNavigation('home')">
+                <span class="material-symbols-outlined">home</span>
+                <span>Home</span>
+            </div>
+            <div class="d-flex gap-3" (click)="onNavigation('search')">
+                <span class="material-symbols-outlined">search</span>
+                <span>Search</span>
+            </div>
+        </div>
+        <div class="home-container-side-bar-section long m-2 me-0 p-3 rounded">
+            <div class="d-flex gap-3">
+                <span class="material-symbols-outlined">stacks</span>
+                <span>Your Library</span>
+                <div class="btn-group dropstart  ms-auto">
+                    <button type="button" class="bg-transparent border-0" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="material-symbols-outlined text-white-50">add</span>
+                    </button>
+                    <ul class="dropdown-menu bg-dark p-2">
+                      <a href="" class="text-light link-underline link-underline-opacity-0">Create a new playlist</a>
+                    </ul>
+                </div>
+                  
+            </div>
+        </div>
+    </div>
+    <div class="home-container_playlist bg-black p-2 col-9">
+        <app-nav></app-nav>
+        <app-artists></app-artists>
+        <app-spotify-playlist></app-spotify-playlist>
+    </div>
+</div>

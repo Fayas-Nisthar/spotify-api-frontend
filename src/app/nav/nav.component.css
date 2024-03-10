@@ -1,0 +1,29 @@
+.nav{
+    background-color: rgb(20, 20, 20);
+    height: 65px;
+    gap: 12px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+.nav>button{
+    font-weight: bold;
+    width: 110px;
+}
+button:nth-child(2){
+    color: rgb(143, 145, 145);
+}
+button:nth-child(2):hover{
+    color: white;
+    font-size:17px ;
+}
+.search_playlist{
+    border: 0;
+    padding: 2px;
+    padding-left: 20px;
+    color: white;
+    width: 350px;
+    height: 100%;
+    border-radius: 25px;
+    background-color: rgb(53, 53, 54);
+}
+

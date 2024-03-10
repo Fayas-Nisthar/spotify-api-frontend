@@ -1,0 +1,23 @@
+<div class="playlists">
+    <div class="">
+        <a href="" class="text-white ms-4 fw-bold fs-4 link-underline link-underline-opacity-0">Spotify Playlist</a>
+    </div>
+    <div class="lists" id="scrollableContainer">
+        <div class="spotify-song-card mt-1 rounded"  *ngFor="let playlist of lists">
+            <div class="shadow" *ngFor="let img of playlist.images">
+                <img src="{{img.url}}" alt="" height="150px" class="rounded">
+                <div class="play">
+                    <div class="box rounded-circle">
+                        <i class="fa-solid fa-play icon"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="text-white name fw-bold mt-2">
+                <span>{{playlist.name}}</span>
+            </div>
+            <div class="description">
+                {{playlist.description}}
+            </div>
+        </div>
+    </div>
+</div>

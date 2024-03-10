@@ -1,0 +1,35 @@
+<div class="bg-black vw-100 vh-100">
+    <div class="row text-light">
+        <div class="col-4 m-4">
+            <a href="" [routerLink]="['/']"><img src="assets/image/spotify.png" alt="" style="height:6%;"></a>
+        </div>
+        <div class="col-3 mt-4">
+            <div class="mt-5" style="font-size:250%; font-weight: bold;">
+                Log in to Spotify
+            </div>
+            <form action="">
+                <div class="mt-5">
+                    <label for="" class="form-label fw-bold">Email Address</label>
+                </div>
+                <div class="">
+                    <input type="email" class="form-control" placeholder="name@domain.com">
+                </div>
+                <div class="mt-5">
+                    <label for="" class="form-label fw-bold">Password</label>
+                </div>
+                <div class="">
+                    <input type="password" class="form-control" placeholder="Password">
+                </div>
+                <div class="mt-4">
+                    <button class="signup rounded-pill">Log In</button>
+                </div>
+            </form>
+            <div class="mt-2 p-3 text-white-50">
+                <hr>
+                Don't have an account? <a href="" [routerLink]="['/signup']" class="text-light fw-bold">Sign up for Spotify.</a>
+            </div>
+        </div>
+        <div class="col-4">
+        </div>
+    </div>
+</div>

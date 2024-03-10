@@ -1,0 +1,74 @@
+.cover img{
+    width: 100%;    
+    position: relative;
+}
+.name span{
+    position: absolute;
+    color: white;
+    font-size: 85px;
+    font-weight: bold;
+    margin-top: -180px;
+    margin-left: 20px;
+}
+.box{
+    background-color: #1ed760;
+    height: 55px;
+    width: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button{
+    display:flex ;
+    align-items: center;
+    padding: 2%;
+    gap: 2%;
+    padding-bottom: 0%;
+}
+.follow .btn{
+    color: rgb(255, 255, 255);
+    width: 80px;
+    font-weight: bold;
+    padding: 2%;
+}
+.follow button:hover{
+    font-size: 105%;
+}
+.spotify-albums{
+    color: white;
+    font-weight: bold;
+    font-size:x-large;
+    padding: 2%;
+}
+.spotify-albums-list{
+    display: flex;
+    align-items: center;
+    padding: 1%;
+    width: 98%;
+    margin-left: 1.5%;
+    color: white;
+    font-weight:600 ;
+    gap: 2%;
+}
+.text-count{
+    color: rgb(142, 142, 142);
+}
+.more-button .btn{
+    margin: 2%;
+    margin-top: 0;
+    color: rgb(147, 147, 147);
+    font-weight: bold;
+}
+.spotify-albums-list:hover{
+    background-color:#292929 ;
+    border-radius: 4px;
+}
+.spotify-albums-list:hover .text-count span{
+    display:none ;
+}
+.text-count i{
+    display: none;
+}
+.spotify-albums-list:hover .text-count i{
+    display:inline ;
+}

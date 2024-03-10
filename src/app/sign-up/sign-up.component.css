@@ -1,0 +1,19 @@
+::placeholder{
+    color: #9f9f9f;
+}
+.form-control{
+    border-color: #9f9f9f;
+    padding: 3%;
+    color: white;
+    background-color: transparent;
+}
+.form-control:hover{
+    border-color: rgb(255, 255, 255);
+}
+.signup{
+    width: 100%;
+    padding: 3%;
+    background-color: #1ed760;
+    border-width: 0;
+    font-weight: bold;
+}

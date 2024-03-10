@@ -1,0 +1,36 @@
+<div class="">
+    <div class="artist">
+        <div class="cover">
+            <img src="{{artist.images[1].url}}" class="object-fit-cover" style="height: 250px;" alt="">
+        </div>
+        <div class="name">
+            <span>{{artist.name}}</span>
+        </div>
+    </div>
+    <div class="button ">
+        <div class="box rounded-circle">
+            <i class="fa-solid fa-play fa-lg icon"></i>
+        </div>
+        <div class="follow border rounded-pill">
+            <button class="btn">Follow</button>
+        </div>
+    </div>
+    
+    <div class="spotify-albums">Popular</div>
+    <div class="spotify-albums-list" *ngFor="let albums of (showAll ? songs.tracks : songs.tracks.slice(0, 5));;let i=index">
+        <div class="text-count" *ngIf="showAll || i < 5" >
+            <span>{{i+1}}</span>
+            <i class="fa-solid fa-play fa-sm icon"></i>
+        </div>
+        <div class="image" *ngIf="showAll || i < 5" >
+            <img src="{{albums.album.images[0].url}}" height="38px" alt="">
+        </div>
+        <div class="album-title" *ngIf="showAll || i < 5">
+            {{albums.name}}
+        </div>
+    </div>
+    <div class="more-button">
+        <button [hidden]="showAll" (click)="toggleItemsDisplay()" class="btn">See more</button>
+        <button [hidden]="!showAll" (click)="toggleItemsDisplay()" class="btn">Show less</button>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+.home-container-side-bar{
+    height: 100vh;
+    background-color: black;
+}
+.home-container_playlist{
+    height: 100%;
+    margin-left: 24%;
+    background-color: black;
+}
+.home-container-side-bar-section{
+    background-color: #191919;
+    display: flex;
+    flex-direction: column;
+    color: rgb(185, 184, 184);
+}
+.long{
+    height:77% ;
+}
+
+.d-flex{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 12px;
+}
+

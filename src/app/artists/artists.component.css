@@ -1,0 +1,55 @@
+.artists{
+    height: 45%;
+    background-color: #000000;
+    background-image: linear-gradient(0deg, #000000 0%, #212121 100%);
+}
+.lists{
+    width: 100%;
+    white-space: nowrap;
+}
+.spotify-artists-card{
+    display: inline-block;
+    background-color: rgb(20, 20, 20);
+    margin-left: 2%;
+    margin-bottom: 2%;
+    height: 280px;
+    width: 205px;
+    padding: 2%;
+    position: relative;
+    white-space: normal;
+}
+.name{
+    overflow: hidden;
+    display: -webkit-box;
+}
+.spotify-artists-card:hover{
+    background-color: #292929;
+}
+.box{
+    background-color: #1ed760;
+    position: absolute;
+    margin-top:-40px;
+    margin-left:110px;
+    height: 35px;
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.play{
+    display: none;
+}
+.spotify-artists-card:hover .play{
+    display:inline
+}
+.type{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;
+    color: #a19f9f;
+    font-size: 15px;
+    font-weight: 550;
+    position: absolute;
+    text-transform: capitalize;
+}
