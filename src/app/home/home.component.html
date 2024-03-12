@@ -4,7 +4,7 @@
             <div class="ms-3">
                 <img width="80" src="assets/image/spotify.png" alt="">
             </div>
-            <div class="d-flex mt-4 gap-3" (click)="onNavigation('home')">
+            <div class="d-flex mt-4 gap-3 home" [routerLink]="['/']" (click)="onNavigation('home')">
                 <span class="material-symbols-outlined">home</span>
                 <span>Home</span>
             </div>

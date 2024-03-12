@@ -34,10 +34,10 @@
         <div class="" style="margin-left: 10px;">
             <div class="artist">
                 <div class="cover">
-                    <img src="{{artist.images[1].url}}" class="object-fit-cover" style="height: 250px;" alt="">
+                    <img src="{{songs.images[0].url}}" class="object" alt="">
                 </div>
                 <div class="name">
-                    <span>{{artist.name}}</span>
+                    <span>{{songs.name}}</span>
                 </div>
             </div>
             <div class="button ">
@@ -50,28 +50,33 @@
             </div>
             <div class="row">
                 <div class="col-8">
-                    <div class="spotify-albums">Popular</div>
-                    <div class="spotify-albums-list" (click)="preview(albums)" *ngFor="let albums of (showAll ? songs.tracks : songs.tracks.slice(0, 5));;let i=index">
-                        <div class="text-count" *ngIf="showAll || i < 5" >
-                            <span>{{i+1}}</span>
-                            <i class="fa-solid fa-play fa-sm icon"></i>
-                        </div>
-                        <div class="image" *ngIf="showAll || i < 5" >
-                            <img src="{{albums.album.images[0].url}}" height="38px" alt="">
-                        </div>
-                        <div class="album-title" *ngIf="showAll || i < 5">
-                            {{albums.name}}
-                        </div>
-                    </div>
-                    
-                    <div class="more-button">
-                        <button [hidden]="showAll" (click)="toggleItemsDisplay()" class="btn">See more</button>
-                        <button [hidden]="!showAll" (click)="toggleItemsDisplay()" class="btn">Show less</button>
-                    </div>
+                    <table>
+                        <tr class="">
+                            <th>#</th>
+                            <th>Title</th>
+                            <th>Album</th>
+                        </tr>
+                        <tr class="round" (click)="preview(albums.track)" *ngFor="let albums of songs.tracks.items;let i=index">
+                            <td>
+                                <span class="text-count color">{{i+1}}</span>
+                                <i class="fa-solid fa-play fa-sm icon"></i>
+                            </td>
+                            <td class="d-flex">
+                                <img class="rounded" style="margin-top: 19px;" src="{{albums.track.album.images[2].url}}" height="40px" alt="">
+                                <div class="d-flex flex-column">
+                                    <span>{{albums.track.name}}</span>
+                                    <span class="fs-6 fw-normal color">{{albums.track.album.artists[0].name}}</span>
+                                </div>
+                            </td>
+                            <td>
+                                {{albums.track.album.name}}
+                            </td>
+                        </tr>
+                    </table>
                 </div>
                 <div class="col-3 player">
                     <div class="w-100 pt-2" *ngIf="!song_image">
-                        <img class="w-100" [src]="artist.images[1].url" alt="">
+                        <img class="w-100" [src]="songs.images[0].url" alt="">
                     </div>
                     <div class="w-100 pt-2" *ngIf="song_image">
                         <img class="w-100" [src]="song_image" alt="">

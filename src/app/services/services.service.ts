@@ -33,7 +33,12 @@ export class ServicesService {
     let headers=authToken? new HttpHeaders().set("Authorization",authToken):undefined
     return this.http.get(`${this.baseUrl}artists/${id}/top-tracks`,{headers})
   }
+  getPlaylistSong(id:any){
+    let authToken=this.getToken()
+    let headers=authToken? new HttpHeaders().set("Authorization",authToken):undefined
+    return this.http.get(`${this.baseUrl}playlists/${id}`,{headers})
+  }
   getToken(){
-    return ""
+    return "Bearer "
   }
 }

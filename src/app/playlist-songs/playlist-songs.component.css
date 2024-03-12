@@ -1,6 +1,11 @@
 .cover img{
-    width: 100%;    
+    width: 100%;   
+    object-fit: cover; 
     position: relative;
+}
+.cover{
+    height: 250px;
+    overflow: hidden;
 }
 .name span{
     position: absolute;
@@ -37,47 +42,40 @@
 .follow button:hover{
     font-size: 105%;
 }
-.spotify-albums{
-    color: white;
-    font-weight: bold;
-    font-size:x-large;
-    padding: 2%;
+
+.color{
+    color: rgb(142, 142, 142);;
 }
-.spotify-albums-list{
-    display: flex;
-    align-items: center;
+table{
     padding: 1%;
-    width: 98%;
+    padding-left: 2%;
     margin-left: 1.5%;
     color: white;
     font-weight:600 ;
-    gap: 2%;
+    border-collapse: separate; /* Separate borders (required for border-radius to work) */
+    border-spacing: 0;
 }
-.text-count{
-    color: rgb(142, 142, 142);
+table>tr{
+    height: 10px;
+    border-radius: 5px;
 }
-.more-button .btn{
-    margin: 2%;
-    margin-top: 0;
-    color: rgb(147, 147, 147);
-    font-weight: bold;
-}
-.spotify-albums-list:hover{
+table>tr:hover{
     background-color:#292929 ;
-    border-radius: 4px;
     cursor: pointer;
 }
-.spotify-albums-list:hover .text-count span{
+table>tr:hover td>span{
     display:none ;
 }
-.text-count i{
+td i{
     display: none;
 }
-.spotify-albums-list:hover .text-count i{
+table>tr:hover td>i{
     display:inline ;
 }
 
-
+td th{
+    text-align: center;
+}
 
 .home-container-side-bar{
     height: 100vh;
@@ -104,7 +102,14 @@
     margin: 12px;
 }
 .player{
+    position: fixed;
     background-color: #292929;
     border-radius: 5px;
-    height: 100%;
+    height: 47%;
+    width: 20%;
+    margin-left:53%;
+    margin-top: -4%;
+}
+.title{
+    font-size: 15px;
 }

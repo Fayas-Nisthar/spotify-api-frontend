@@ -24,6 +24,7 @@
 }
 .spotify-artists-card:hover{
     background-color: #292929;
+    cursor: pointer;
 }
 .box{
     background-color: #1ed760;
@@ -35,6 +36,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.box:hover{
+    height: 38px;
+    width: 38px;
 }
 .play{
     display: none;

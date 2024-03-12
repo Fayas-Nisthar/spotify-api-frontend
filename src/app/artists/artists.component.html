@@ -3,8 +3,8 @@
         <a href="" class="text-white ms-4 fw-bold fs-4 link-underline link-underline-opacity-0">Popular artists</a>
     </div>
     <div class="lists">
-        <div class="spotify-artists-card mt-1 rounded" *ngFor="let artist of name">
-            <div [routerLink]="['artists',artist.id]">
+        <div class="spotify-artists-card mt-1 rounded" [routerLink]="['artists',artist.id]" *ngFor="let artist of name">
+            <div>
                 <div class="shadow">
                     <img src="{{artist.images[0].url}}" alt="" width="100%" height="150px" class="rounded rounded-circle object-fit-cover">
                     <div class="play">

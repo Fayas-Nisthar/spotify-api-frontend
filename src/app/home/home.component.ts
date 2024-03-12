@@ -7,6 +7,7 @@ import { ServicesService } from '../services/services.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+
   constructor(private service:ServicesService){
   }
   onNavigation(page:string){
@@ -15,5 +16,7 @@ export class HomeComponent {
     } else {
       this.service.isSearchVisible.next(false)
     }
+
   }
+
 }

@@ -3,7 +3,7 @@
         <a href="" class="text-white ms-4 fw-bold fs-4 link-underline link-underline-opacity-0">Spotify Playlist</a>
     </div>
     <div class="lists" id="scrollableContainer">
-        <div class="spotify-song-card mt-1 rounded"  *ngFor="let playlist of lists">
+        <div class="spotify-song-card mt-1 rounded" [routerLink]="['playlist',playlist.id]"  *ngFor="let playlist of lists">
             <div class="shadow" *ngFor="let img of playlist.images">
                 <img src="{{img.url}}" alt="" height="150px" class="rounded">
                 <div class="play">

@@ -13,6 +13,9 @@
     flex-direction: column;
     color: rgb(185, 184, 184);
 }
+.home:hover{
+    cursor: pointer;
+}
 .long{
     height:77% ;
 }
