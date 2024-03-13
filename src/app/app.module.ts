@@ -13,6 +13,8 @@ import { ArtistsComponent } from './artists/artists.component';
 import {HttpClientModule} from '@angular/common/http';
 import { GetartistComponent } from './getartist/getartist.component';
 import { PlaylistSongsComponent } from './playlist-songs/playlist-songs.component';
+import { SearchComponent } from './search/search.component';
+import { SearchResultComponent } from './search-result/search-result.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { PlaylistSongsComponent } from './playlist-songs/playlist-songs.componen
     SpotifyPlaylistComponent,
     ArtistsComponent,
     GetartistComponent,
-    PlaylistSongsComponent
+    PlaylistSongsComponent,
+    SearchComponent,
+    SearchResultComponent
   ],
   imports: [
     BrowserModule,

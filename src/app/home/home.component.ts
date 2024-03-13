@@ -16,7 +16,6 @@ export class HomeComponent {
     } else {
       this.service.isSearchVisible.next(false)
     }
-
   }
 
 }

@@ -1,6 +1,7 @@
 <div class="nav d-flex p-2">
     <div class="">
-        <input *ngIf="isSearchFieldVisible" class="search_playlist" type="search" placeholder="What do you want to play?">
+        <input *ngIf="isSearchFieldVisible" class="search_playlist" type="search" placeholder="What do you want to play?" 
+        (input)="filterBrowsingList($event)">
     </div>
     <button class="btn ms-auto" [routerLink]="['/signup']">Sign up</button>
     <button class="btn me-5 btn-light rounded-pill" [routerLink]="['/signin']">Log in</button>

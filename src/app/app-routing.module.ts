@@ -5,6 +5,8 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { HomeComponent } from './home/home.component';
 import { GetartistComponent } from './getartist/getartist.component';
 import { PlaylistSongsComponent } from './playlist-songs/playlist-songs.component';
+import { SearchComponent } from './search/search.component';
+import { SearchResultComponent } from './search-result/search-result.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
@@ -12,6 +14,7 @@ const routes: Routes = [
   {path:"signup",component:SignUpComponent},
   {path:"artists/:id",component:GetartistComponent},
   {path:"playlist/:id",component:PlaylistSongsComponent},
+  {path:"search",component:SearchComponent},
 ];
 
 @NgModule({

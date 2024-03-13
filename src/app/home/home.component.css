@@ -16,6 +16,9 @@
 .home:hover{
     cursor: pointer;
 }
+.search:hover{
+    cursor: pointer;
+}
 .long{
     height:77% ;
 }

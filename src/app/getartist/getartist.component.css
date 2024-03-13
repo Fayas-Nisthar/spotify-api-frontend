@@ -28,6 +28,9 @@
 .home:hover{
     cursor: pointer;
 }
+.search:hover{
+    cursor: pointer;
+}
 .follow .btn{
     color: rgb(255, 255, 255);
     width: 80px;

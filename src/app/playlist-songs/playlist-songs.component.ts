@@ -18,6 +18,7 @@ export class PlaylistSongsComponent implements OnInit {
     }
   }
   songs:any
+  song_name:any
   id:any
   url:any
   song_image:any
@@ -37,6 +38,7 @@ export class PlaylistSongsComponent implements OnInit {
   }
   preview(albums:any){
     this.url = albums.preview_url;
+    this.song_name=albums.name;
     this.song_image=albums.album.images[1].url;
     this.audioPlayerRef.nativeElement.pause();
     this.audioPlayerRef.nativeElement.load();

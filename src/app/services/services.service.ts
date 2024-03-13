@@ -1,17 +1,21 @@
 import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServicesService {
-
+  private searchQuerySubject: BehaviorSubject<string> = new BehaviorSubject<string>('');
+  public searchQuery$: Observable<string> = this.searchQuerySubject.asObservable();
   public isSearchVisible:BehaviorSubject<boolean>=new BehaviorSubject<boolean>(false);
 
   baseUrl:string=`https://api.spotify.com/v1/`
 
   constructor(private http:HttpClient) { }
+  setSearchQuery(query: string): void {
+    this.searchQuerySubject.next(query);
+  }
 
   getHomeArtists(){
     let authToken=this.getToken()
@@ -38,7 +42,14 @@ export class ServicesService {
     let headers=authToken? new HttpHeaders().set("Authorization",authToken):undefined
     return this.http.get(`${this.baseUrl}playlists/${id}`,{headers})
   }
+  searchResult(search:string){
+    let authToken=this.getToken()
+    let headers=authToken? new HttpHeaders().set("Authorization",authToken):undefined
+    return this.http.get(`${this.baseUrl}search?q=${search}&type=track&market=IN&limit=10`,{headers})
+  }
   getToken(){
     return "Bearer "
   }
+
+  
 }

@@ -1,4 +1,4 @@
-<div class="home-container bg-black row">
+<div class="home-container bg-black vh-100 row">
     <div class="home-container-side-bar position-fixed col-3 p-2">
         <div class="home-container-side-bar-section ms-2 p-3 rounded">
             <div class="ms-3">
@@ -29,54 +29,30 @@
             </div>
         </div>
     </div>
-    <div class="home-container_playlist bg-black p-2 col-9">
+    <div class="home-container_playlist p-2 col-9">
         <app-nav></app-nav>
-        <div class="" style="margin-left: 1.5px;">
-            <div class="artist">
-                <div class="cover">
-                    <img src="{{artist.images[1].url}}" class="object-fit-cover" style="height: 250px;" alt="">
-                </div>
-                <div class="name">
-                    <span>{{artist.name}}</span>
-                </div>
-            </div>
-            <div class="button ">
-                <div class="box rounded-circle">
-                    <i class="fa-solid fa-play fa-lg icon"></i>
-                </div>
-                <div class="follow border rounded-pill">
-                    <button class="btn">Follow</button>
-                </div>
-            </div>
-            <div class="row">
+        <div class="">
+            <div class="row" *ngIf="songs">
                 <div class="col-8">
-                    <div class="spotify-albums">Popular</div>
-                    <div class="spotify-albums-list" (click)="preview(albums)" *ngFor="let albums of (showAll ? songs.tracks : songs.tracks.slice(0, 5));;let i=index">
-                        <div class="text-count" *ngIf="showAll || i < 5" >
+                    <div class="spotify-albums">Songs</div>
+                    <div class="spotify-albums-list" (click)="preview(albums)" *ngFor="let albums of songs.tracks.items;let i=index">
+                        <div class="text-count" >
                             <span>{{i+1}}</span>
                             <i class="fa-solid fa-play fa-sm icon"></i>
                         </div>
-                        <div class="image" *ngIf="showAll || i < 5" >
+                        <div class="image">
                             <img src="{{albums.album.images[0].url}}" height="38px" alt="">
                         </div>
-                        <div class="album-title" *ngIf="showAll || i < 5">
+                        <div class="album-title">
                             {{albums.name}}
                         </div>
                     </div>
-                    
-                    <div class="more-button">
-                        <button [hidden]="showAll" (click)="toggleItemsDisplay()" class="btn">See more</button>
-                        <button [hidden]="!showAll" (click)="toggleItemsDisplay()" class="btn">Show less</button>
-                    </div>
                 </div>
-                <div class="col-3 player">
-                    <div class="w-100 pt-2" *ngIf="!song_image">
-                        <img class="w-100" [src]="artist.images[1].url" alt="">
-                    </div>
+                <div class="col-3 mt-5 player">
                     <div class="w-100 pt-2" *ngIf="song_image">
                         <img class="w-100" [src]="song_image" alt="">
                     </div>
-                    <div>
+                    <div *ngIf="url">
                         <audio #audioPlayer controls class="w-100" [autoplay]="url ? true : false">
                             <source [src]="url" type="audio/mpeg">
                         </audio>
@@ -84,10 +60,5 @@
                 </div>
             </div>
         </div>
-        
     </div>
-    
 </div>
-
-
-
