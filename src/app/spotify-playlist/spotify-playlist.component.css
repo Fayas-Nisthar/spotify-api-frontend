@@ -20,6 +20,9 @@
     position: relative;
     white-space: normal;
 }
+.spotify-song-card:hover{
+    cursor: pointer;
+}
 
 .name{
     overflow: hidden;
