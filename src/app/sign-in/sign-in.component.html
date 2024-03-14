@@ -7,21 +7,21 @@
             <div class="mt-5" style="font-size:250%; font-weight: bold;">
                 Log in to Spotify
             </div>
-            <form action="">
+            <form action="" [formGroup]="loginForm" (ngSubmit)="login()">
                 <div class="mt-5">
                     <label for="" class="form-label fw-bold">Email Address</label>
                 </div>
                 <div class="">
-                    <input type="email" class="form-control" placeholder="name@domain.com">
+                    <input type="email" class="form-control" formControlName="email" placeholder="name@domain.com">
                 </div>
                 <div class="mt-5">
                     <label for="" class="form-label fw-bold">Password</label>
                 </div>
                 <div class="">
-                    <input type="password" class="form-control" placeholder="Password">
+                    <input type="password" class="form-control" formControlName="password" placeholder="Password">
                 </div>
                 <div class="mt-4">
-                    <button class="signup rounded-pill" (click)="login()">Log In</button>
+                    <button type="submit" class="signup rounded-pill text-black" [disabled]="loginForm.invalid" >Log In</button>
                 </div>
             </form>
             <div class="mt-2 p-3 text-white-50">

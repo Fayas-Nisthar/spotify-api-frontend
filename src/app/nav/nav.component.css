@@ -8,11 +8,12 @@
 .nav>button{
     font-weight: bold;
     width: 110px;
+    margin-right: 25px;
 }
-button:nth-child(2){
+button:nth-child(1){
     color: rgb(143, 145, 145);
 }
-button:nth-child(2):hover{
+button:nth-child(1):hover{
     color: white;
     font-size:17px ;
 }

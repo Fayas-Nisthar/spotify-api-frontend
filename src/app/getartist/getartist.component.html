@@ -4,11 +4,11 @@
             <div class="ms-3">
                 <img width="80" src="assets/image/spotify.png" alt="">
             </div>
-            <div class="d-flex mt-4 gap-3 home" [routerLink]="['/']" (click)="onNavigation('home')">
+            <div class="d-flex mt-4 gap-3 home" [routerLink]="['/spotify']" (click)="onNavigation('home')">
                 <span class="material-symbols-outlined">home</span>
                 <span>Home</span>
             </div>
-            <div class="d-flex gap-3 search" [routerLink]="['/search']" (click)="onNavigation('search')">
+            <div class="d-flex gap-3 search" [routerLink]="['/spotify/search']" (click)="onNavigation('search')">
                 <span class="material-symbols-outlined">search</span>
                 <span>Search</span>
             </div>

@@ -6,15 +6,13 @@ import { HomeComponent } from './home/home.component';
 import { GetartistComponent } from './getartist/getartist.component';
 import { PlaylistSongsComponent } from './playlist-songs/playlist-songs.component';
 import { SearchComponent } from './search/search.component';
-import { SearchResultComponent } from './search-result/search-result.component';
-
 const routes: Routes = [
-  {path:"",component:HomeComponent},
-  {path:"signin",component:SignInComponent},
+  {path:"spotify",component:HomeComponent},
+  {path:"",component:SignInComponent},
   {path:"signup",component:SignUpComponent},
-  {path:"artists/:id",component:GetartistComponent},
-  {path:"playlist/:id",component:PlaylistSongsComponent},
-  {path:"search",component:SearchComponent},
+  {path:"spotify/artists/:id",component:GetartistComponent},
+  {path:"spotify/playlist/:id",component:PlaylistSongsComponent},
+  {path:"spotify/search",component:SearchComponent},
 ];
 
 @NgModule({

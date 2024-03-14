@@ -47,9 +47,16 @@ export class ServicesService {
     let headers=authToken? new HttpHeaders().set("Authorization",authToken):undefined
     return this.http.get(`${this.baseUrl}search?q=${search}&type=track&market=IN&limit=10`,{headers})
   }
-  getToken(){
-    return "Bearer "
+  signUp(data:any){
+    return this.http.post("http://127.0.0.1:8000/register/",data)
   }
-
-  
+  signIn(data:any){
+    return this.http.post("http://127.0.0.1:8000/login/",data)
+  }
+  logOut(){
+    return this.http.post("http://127.0.0.1:8000/logout/",{})
+  }
+  getToken(){
+    return "Bearer BQCzTa_p0kzSZqkvcD0qf4XPfALW9viqu-VFg9xDEz_87PKCwITtFwSLtLxOQkZhg4pjtuhj_aGiUqGV1lCzIc75HRPWBN7pRoFrCg1uonjLZMvEQDw"
+  }
 }

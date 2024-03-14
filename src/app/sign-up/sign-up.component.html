@@ -7,20 +7,26 @@
             <div class="mt-5" style="font-size:250%; font-weight: bold;">
                 Sign up to start listening
             </div>
-            <form action="">
+            <form action="" [formGroup]="signupform" (ngSubmit)="register()">
                 <div class="mt-5">
                     <label for="" class="form-label fw-bold">Email Address</label>
                 </div>
                 <div class="">
-                    <input type="email" class="form-control" placeholder="name@domain.com">
+                    <input type="email" class="form-control" formControlName="email" placeholder="name@domain.com">
+                </div>
+                <div class="mt-5">
+                    <label for="" class="form-label fw-bold">Password</label>
+                </div>
+                <div class="">
+                    <input type="password" class="form-control" formControlName="password">
                 </div>
                 <div class="mt-4">
-                    <button class="signup rounded-pill">Next</button>
+                    <button type="submit" class="signup rounded-pill text-black" [disabled]="signupform.invalid" >Sign Up</button>
                 </div>
             </form>
             <div class="mt-2 p-3 text-white-50">
                 <hr>
-                Already have an account? <a href="" [routerLink]="['/signin']" class="text-light fw-bold">Log in here.</a>
+                Already have an account? <a href="" [routerLink]="['/']" class="text-light fw-bold">Log in here.</a>
             </div>
         </div>
         <div class="col-4">

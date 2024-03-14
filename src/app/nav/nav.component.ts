@@ -27,4 +27,13 @@ export class NavComponent implements OnInit{
   updateUrl(query: string): void {
     window.history.replaceState(null, '', `/search/${query}`);
   }
+  logOut(){
+    this.service.logOut().subscribe((data:any)=>{
+      if (data && data.message === 'Logout successful'){
+        this.router.navigateByUrl("")
+      }
+      else{
+      }
+    })
+  }
 }
